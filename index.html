@@ -60,16 +60,11 @@
         <div class="row row-offcanvas row-offcanvas-left">
           <div class="col-xs-6 col-sm-3 sidebar-offcanvas" role="navigation">
             <ul class="list-group panel">
-                <li class="list-group-item">
-                  <i class="glyphicon glyphicon-align-justify"></i> <b>SIDE PANEL</b></li>
-                <li class="list-group-item">
-                  <input type="text" class="form-control search-query" placeholder="Search Something"></li>
-                <li class="list-group-item"><a href="index.html">
-                  <i class="glyphicon glyphicon-home"></i>Inicio </a></li>
-                <li class="list-group-item"><a href="#" onclick="getUrl('Vista/VCliente.php','')">
-                  <i class="glyphicon glyphicon-certificate">
-                </i>Cliente </a></li>
-        
+                <li class="list-group-item"><i class="glyphicon glyphicon-align-justify"></i> <b>SIDE PANEL</b></li>
+                <li class="list-group-item"><input type="text" class="form-control search-query" placeholder="Search Something"></li>
+                <li class="list-group-item"><a href="index.html"><i class="glyphicon glyphicon-home"></i>Inicio </a></li>
+                <li class="list-group-item"><a href="#" onclick="getUrl('Vista/VCliente.php', '')"><i class="glyphicon glyphicon-certificate"></i>Cliente </a></li>
+                
                 <li>
                   <a href="#demo3" class="list-group-item " data-toggle="collapse">Consultas<span class="glyphicon glyphicon-chevron-right"></span></a>
                   <div class="collapse" id="demo3">
@@ -115,8 +110,6 @@
     <div class="site-footer">
       <div class="container">
         <hr class="dashed" />
-        <div class="row"> 
-        <hr class="dashed" />
         <div class="copyright clearfix">
           <p><b>Bootflat</b>&nbsp;&nbsp;&nbsp;&nbsp;<a href="getting-started.html">Getting Started</a>&nbsp;&bull;&nbsp;<a href="index.html">Documentation</a>&nbsp;&bull;&nbsp;<a href="https://github.com/Bootflat/Bootflat.UI.Kit.PSD/archive/master.zip">Free PSD</a>&nbsp;&bull;&nbsp;<a href="colors.html">Color Picker</a></p>
           <p>Code licensed under <a href="http://opensource.org/licenses/mit-license.html" target="_blank" rel="external nofollow">MIT License</a>, documentation under <a href="http://creativecommons.org/licenses/by/3.0/" rel="external nofollow">CC BY 3.0</a>.</p>
@@ -124,25 +117,23 @@
       </div>
     </div>
 
-    <script src="Vista/libreria/dist/js/jquery-3.6.0.min.js"></script>
+    <script src="Vista/libreria/js_index/jquery-3.6.0.min.js"></script>
     <script>
-      function getUrl(link, param){
+      function getUrl(link, para){
         $.ajax({
           url: link,
-          data: {param},
+          data: {para},
           type: 'POST',
           beforeSend:function(e){
-            
+
           },
           success: function(data){
             $('#TbBody').html(data);
           },error: function(error){
-            alert('Error 404: '+error);
+            alert('Error 404:'+error);
           }
         });
       }
-      
     </script>
-
   </body>
 </html>

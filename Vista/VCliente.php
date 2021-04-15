@@ -1,8 +1,3 @@
-<hmtl>
-<head>
-<title>Bienvenido al sistema</title>
-</head>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
     $.ajax({
         url: "Servicio/SCliente.php",
@@ -12,18 +7,16 @@
         success: function(resp){
             var tabla="";
             var JCli = resp;
-
+            
             for(var i=0;i<JCli.length;i++){
                 tabla+="<tr>";
                 tabla+="<td>"+JCli[i]['cod']+"</td>";
                 tabla+="<td>"+JCli[i]['nom']+"</td>";
                 tabla+="<td>"+JCli[i]['ape']+"</td>";
                 tabla+="<td>"+JCli[i]['dni']+"</td>";
-                tabla+="<td>"+JCli[i]['cod_dist']+"</td>";
                 tabla+="</tr>";
             }
             $('#TbLista').html(tabla);
-
         },error: function(mens){
             alert('Error 404:'+mens);
         }
@@ -37,8 +30,8 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Dni</th>
-                <th>Distrito</th>
-
+                <th>Eli</th>
+                <th>Edit</th>
             </tr>
         </thead>
         <thead>
@@ -46,4 +39,3 @@
         </thead>
     </table>
 </div>
-</hmtl>
