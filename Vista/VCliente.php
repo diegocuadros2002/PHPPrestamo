@@ -30,7 +30,7 @@
                 <th>Nombre</th>
                 <th>Apellido</th>
                 <th>Dni</th>
-                <th>Eli</th>
+                <th>Delete</th>
                 <th>Edit</th>
             </tr>
         </thead>
